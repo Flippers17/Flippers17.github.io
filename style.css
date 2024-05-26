@@ -1,0 +1,164 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,500;1,400&display=swap');
+
+
+:root{
+    --mainColor: #D15747;
+    --secondaryColor: #5f9ea0;
+    --color3: #915D56;
+    --color4: #524645;
+    --color5: #547C68;
+
+}
+
+body
+{
+    margin: 0;
+    font-family: 'Roboto', sans-serif;
+}
+
+.navbar
+{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 1.5rem;
+}
+
+.nav-menu{
+    list-style: none;
+    display: flex;
+    padding: 0;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav-item
+{
+    margin-left: 5rem;
+}
+
+.nav-link
+{
+    text-decoration: none;
+    font-size: 1.6rem;
+    font-weight: 400;
+    color: #475569;
+}
+
+.nav-link:hover
+{
+    color: #482ff7;
+}
+
+.nav-logo
+{
+    text-decoration: none;
+    font-size: 2.1rem;
+    font-weight: 500;
+    color: #d15747;
+}
+
+header
+{
+    border-bottom: 1px solid #E2E8F0;
+}
+
+.hamburger
+{
+    display: none;
+}
+.bar
+{
+    display: block;
+    width: 25px;
+    height: 3px;
+    margin: 5px auto;
+    -webkit-transition: all .3s ease-in-out;
+    transition: all .3s ease-in-out;
+    background-color: #101010;
+}
+
+
+.gamesList
+{
+    padding-top: 50px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.gameInfoBox
+{
+    background-color: var(--secondaryColor);
+    border-radius: 3%;
+    padding: 2rem;
+    width: 30rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+    justify-content: space-between;
+}
+
+.gameMedia
+{
+    display: flex;
+    width: 100%;
+    padding: 0;
+    margin: auto;
+    align-items: center;
+    justify-content: center;
+}
+
+.gameMedia:nth-child(2)
+{
+    aspect-ratio: calc(16/9);
+}
+
+
+
+@media only screen and (max-width: 768px) {
+    .nav-menu {
+        position: fixed;
+        right: -100%;
+        top: 0;
+        padding-bottom: 10%;
+        flex-direction: column;
+        background-color: #fff;
+        width: 70%;
+        border-radius: 10px;
+        text-align: center;
+        transition: 0.3s;
+        box-shadow:
+            0 10px 27px rgba(0, 0, 0, 0.05);
+    }
+    .nav-menu.active {
+        right: 0;
+    }
+
+    .nav-item {
+        margin: 2.5rem 0;
+    }
+
+    .hamburger {
+        display: block;
+        cursor: pointer;
+    }
+
+    .hamburger.active .bar:nth-child(2)
+    {
+        opacity: 0;
+    }
+    
+    .hamburger.active .bar:nth-child(1)
+    {
+        transform: translateY(8px) rotate(45deg);
+    }
+
+    .hamburger.active .bar:nth-child(3)
+    {
+        transform: translateY(-8px) rotate(-45deg);
+    }
+}
