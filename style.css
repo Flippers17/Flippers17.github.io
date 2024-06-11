@@ -2,12 +2,12 @@
 
 
 :root{
-    --mainColor: #D15747;
-    --secondaryColor: #5f9ea0;
-    --color3: #915D56;
+    --mainColor: #d15747;
+    --secondaryColor: #632922;
+    --color3: #f39b8f;
     --color4: #524645;
-    --color5: #547C68;
-
+    --color5: #411B16;
+    --color6: #332220;
 }
 
 body
@@ -42,12 +42,12 @@ body
     text-decoration: none;
     font-size: 1.6rem;
     font-weight: 400;
-    color: #475569;
+    color: var(--mainColor);
 }
 
 .nav-link:hover
 {
-    color: #482ff7;
+    color: var(--color3);
 }
 
 .nav-logo
@@ -55,12 +55,13 @@ body
     text-decoration: none;
     font-size: 2.1rem;
     font-weight: 500;
-    color: #d15747;
+    color: var(--mainColor);
 }
 
 header
 {
-    border-bottom: 1px solid #E2E8F0;
+    background-color: var(--color5);
+    border-bottom: 1px solid var(--color6);
 }
 
 .hamburger

@@ -1,11 +1,18 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,500;1,400&display=swap');
+
+
+
 .gamesList
 {
     padding-top: 50px;
+    padding-bottom: 20em;
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: space-around;
     align-items: center;
+
+    background-color: var(--color4);
 }
 
 .gameHeader
@@ -17,33 +24,48 @@
 
 .gameInfoBox
 {
+    transition-duration: .3s;
     text-decoration: none;
     text-decoration-color: rgb(0, 0, 0, 0);
     color: rgb(219, 219, 219);
-    background-color: var(--secondaryColor);
+    background-color: var(--mainColor);
     border-radius: 3%;
     border: #101010 solid;
     padding: 0;
     width: 30rem;
+    height: 40rem;
     display: flex;
     flex-direction: column;
     align-items: center;
     
-    justify-content: space-between;
+}
+
+.gameInfoBox:hover
+{
+    transition-duration: .3s;
+    background-color: var(--secondaryColor);
+    transform: translateY(-1em);
 }
 
 .gameMedia
 {
     display: flex;
     width: 100%;
+    height: 50%;
     max-width: 100%;
     min-width: auto;
     padding: 0;
-    margin: auto;
+    margin-top: 0;
     margin-bottom: 2em;
     align-items: center;
     justify-content: center;
     border-bottom: #101010 solid 5px;
+    overflow: hidden;
+}
+
+.gameMedia > img
+{
+    width: 100%;
 }
 
 .mediaOverlay
