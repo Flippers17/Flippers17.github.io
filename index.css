@@ -1,0 +1,65 @@
+.gamesList
+{
+    padding-top: 50px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.gameHeader
+{
+    width: 100%;
+    margin-bottom: 1em;
+    text-align: center;
+}
+
+.gameInfoBox
+{
+    text-decoration: none;
+    text-decoration-color: rgb(0, 0, 0, 0);
+    color: rgb(219, 219, 219);
+    background-color: var(--secondaryColor);
+    border-radius: 3%;
+    border: #101010 solid;
+    padding: 0;
+    width: 30rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+    justify-content: space-between;
+}
+
+.gameMedia
+{
+    display: flex;
+    width: 100%;
+    max-width: 100%;
+    min-width: auto;
+    padding: 0;
+    margin: auto;
+    margin-bottom: 2em;
+    align-items: center;
+    justify-content: center;
+    border-bottom: #101010 solid 5px;
+}
+
+.mediaOverlay
+{
+    width: 30rem;
+    position: absolute;
+    align-self: flex-end;
+    text-align: center;
+    background-color: #10101063;
+    /*border-bottom: 10px #101010 solid;*/
+    padding: .2em 0;
+    color: #fff;
+}
+
+.gameText
+{
+    margin: 0 2em;
+    margin-bottom: 2em;
+}
