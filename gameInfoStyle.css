@@ -5,11 +5,23 @@
 p
 {
     font-family: 'Roboto';
-    font-size: 1em;
+    font-size: 1.4em;
 }
+
+h2
+{
+    margin-top: 3em;
+}
+.contributionsList
+{
+    font-size: 1.4em;
+    text-align: left;
+}
+
 
 .gameInfo
 {
+    color: var(--textColor);
     padding: 5em 5em 5em 10em;
     background-color: var(--color4);
     display: flex;

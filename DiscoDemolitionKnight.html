@@ -33,12 +33,50 @@
     </header>
 
     <div class="gameInfo">
+        <h1>Disco Demolition Knight</h1>
         <img src="TempPic.png" alt="headImage" class="headImage">
+
+        <p>
+            This is a student project I did together with 11 other people in the course Spelprojekt 2 (Game project 2), where the focus was mostly just on making a fun game in order to improve your skills. The hook of this game was that your shots would fire in sync with the music and also add another track of sounds to the music when fired. Working with this many people on one project was also a new experience, from which i learnt alot. This is probably also the biggest project I have worked on so far, at least in scope and resources, concidering we were 12 people, although we only got about 8 weeks to work on it
+        </p>
+        <h2>Some of my contributions:</h2>
+        <ul class="contributionsList">
+            <li>The shooting mechanic where shooting is in sync with the music</li>
+            <li>Player input system</li>
+            <li>Player Movement</li>
+            <li>Player stats system</li>
+            <li>Utility system and logic to make adding utilities easier</li>
+            <li>Player Weapon logic</li>
+            <li>Upgrade system for the player</li>
+        </ul>
+        <h2>Syncing gameplay to the music</h2>
+        <p>
+            My biggest role in this project was the programming of this feature, and so I worked closely with the musician of our team. From this project, I learned alot about the tool FMOD, used for implementing sounds and/or music in game engines like Unity, since we needed this sort of tool in order to make this kind of game. Certain aspects of a FMOD project could be listened to as if they were events, which we used to our advantage. Because of some quirks with the FMOD engine, some workarounds were used in the FMOD-project in order to make it actually sync, as it would be off sync otherwise.
+        </p>
+
+        <h2>Inventory system</h2>
+        <p>
+            Another thing I think turned out fairly well was the inventory system. It wasn’t anything advanced or anything, but because of it, I could separate logic for using weapons and utilities from what is available for the player to use. This type of cohesion makes programming features a lot easier, and helped out a lot during development.    
+        </p>
+
+        <h2>Optimizing enemy flocks</h2>
+        <p>
+            The enemy movement logic was at the beginning done mostly by another programmer, using the BOIDS-algorithm to get a sort of flocking behaviour. The resulting behaviour might not have been quite the behaviour we were looking for, but we went on with that behaviour for the time being. When it was time for us to try running our game on some less powerful machines, we quickly noticed that rounds where hundreds of enemies would be in play at the same time would run pretty poorly.
+             To improve this, I made a sort of space partitioning system to speed up the neighbour finding process. The space partitioning was basically a quadtree, except it was static and was divided into a predetermined number of levels from the start. This was done to avoid the extra cost of building the quadtree every frame, which I, at that time, judged was better for performance in our case, than a typical quadtree.    
+        </p>
 
         <p>
             Lorem ipsum dolor sit amet consectetur adipisicing elit. 
             Consectetur pariatur tenetur ducimus maiores quos illum perferendis voluptates aliquam laboriosam consequuntur incidunt, repudiandae cum ex, nisi, veniam repellat officia deserunt explicabo.        
         </p>
     </div>
+
+
+    <footer class="contactInfoSection">
+        <h1 class="contactHeadline">Contact information</h1>
+        <div class="contactLinks">
+            <a href="https://www.linkedin.com/in/filip-j%C3%A4rlesj%C3%B6-4a30692b3/">linkedIn</a>
+        </div>
+    </footer>
 </body>
 </html>

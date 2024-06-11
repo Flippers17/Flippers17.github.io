@@ -8,6 +8,8 @@
     --color4: #524645;
     --color5: #411B16;
     --color6: #332220;
+
+    --textColor: rgb(219, 219, 219);
 }
 
 body
@@ -80,6 +82,42 @@ header
 }
 
 
+.contactInfoSection
+{
+    text-decoration: none;
+    background-color: var(--color6);
+    color: var(--textColor);
+    
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+
+    padding-bottom: 4em;
+}
+
+.contactHeadline
+{
+    margin-left: 2em;
+}
+
+.contactLinks
+{
+    display: flex;
+    margin-top: 2em;
+    margin-bottom: 4em;
+    justify-content: center;
+    align-items: center;
+}
+
+.contactLinks > a
+{
+    text-decoration: none;
+    color: var(--textColor);
+}
+.contactLinks > a:hover
+{
+    color: var(--color3);
+}
 
 
 @media only screen and (max-width: 768px) {
