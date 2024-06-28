@@ -9,9 +9,14 @@ p
     max-width: 40em;
 }
 
+h1
+{
+    color: var(--redText);
+}
 h2
 {
     margin-top: 3em;
+    color: var(--redText);
 }
 .contributionsList
 {
