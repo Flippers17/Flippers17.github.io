@@ -22,9 +22,9 @@ h2
 
 .gameInfo
 {
-    color: var(--textColor);
+    color: var(--lightRedText);
     padding: 5em 5em 10em 5em;
-    background-color: var(--color4);
+    background-color: var(--backgroundColor);
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -49,14 +49,15 @@ h2
     text-align: center;
     padding: 1em;
     font-size: 2em;
-    background-color: rgba(0, 0, 0, 0.411);
-    color: var(--textColor);
+    background-color: var(--headerColor);
+    color: var(--redText);
 }
 
 .downloadLink:hover
 {
     /*color: burlywood;*/
     transition:ease-in-out .1s;
+    color: var(--lightRedText);
     background-color: rgba(160, 160, 160, 0.829);
 }
 
