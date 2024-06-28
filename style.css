@@ -42,6 +42,8 @@ body
 .nav-link
 {
     text-decoration: none;
+    display: flex;
+    align-items: center;
     font-size: 1.6rem;
     font-weight: 400;
     color: var(--mainColor);
@@ -50,6 +52,11 @@ body
 .nav-link:hover
 {
     color: var(--color3);
+
+    .nav-item-image
+    {
+        filter: invert(68%) sepia(19%) saturate(880%) hue-rotate(318deg) brightness(97%) contrast(96%);
+    }
 }
 
 .nav-logo
@@ -59,6 +66,14 @@ body
     font-weight: 500;
     color: var(--mainColor);
 }
+
+.nav-item-image
+{
+    filter: invert(42%) sepia(9%) saturate(3044%) hue-rotate(319deg) brightness(102%) contrast(107%);
+    width: 1.5em;
+    margin: .2em;
+}
+
 
 header
 {

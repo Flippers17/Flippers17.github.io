@@ -41,3 +41,22 @@ h2
     margin-bottom: 2em;
 }
 
+
+.downloadLink
+{
+    transition:ease-in-out .1s;
+    width: 200%;
+    text-align: center;
+    padding: 1em;
+    font-size: 2em;
+    background-color: rgba(0, 0, 0, 0.411);
+    color: var(--textColor);
+}
+
+.downloadLink:hover
+{
+    /*color: burlywood;*/
+    transition:ease-in-out .1s;
+    background-color: rgba(160, 160, 160, 0.829);
+}
+
