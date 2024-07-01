@@ -1,6 +1,50 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,500;1,400&display=swap');
 
 
+.aboutMeSection
+{
+    background-color: var(--darkRedHighlight);
+    margin: 0;
+
+    padding-bottom: 3em;
+    padding-top: 2em;
+    
+}
+
+.aboutMeContainer
+{
+    display: flex;
+    flex-wrap: wrap;
+    font-size: 1.8em;
+    padding: 1em 3em;
+    color: var(--lightRedText);
+
+    align-content: center;
+    justify-content: center;
+}
+
+.pictureContainer
+{
+    flex-shrink: 0;
+    overflow: hidden;
+    width: 10em;
+    height: 10em;
+
+    border-radius: 100%;
+    /* border: 5px var(--headerColor) solid; */
+    filter: drop-shadow(0 0 .5em black);
+}
+.profilePicture
+{
+    position: absolute;
+    width: 23em;
+    transform: translate(-3.5em, -8em);
+}
+
+.informationText
+{
+    width: 70%;
+}
 
 .gamesList
 {
