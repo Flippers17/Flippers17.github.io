@@ -12,6 +12,7 @@
     --backgroundColor: #1a1617;
     --headerColor: #443539;
     --highlightColor: #D0CDD7;
+    --darkRedHighlight: #632922;
 
 
     --redText: #b34b3e;
@@ -109,7 +110,7 @@ header
 {
     text-decoration: none;
     background-color: var(--headerColor);
-    color: var(--textColor);
+    color: var(--redText);
     
     border-top: #101010 3px solid;
     margin: 0;
@@ -127,25 +128,43 @@ header
 .contactLinks
 {
     display: flex;
-    margin-top: 2em;
-    margin-bottom: 4em;
-    justify-content: center;
+    margin-top: 1em;
+    margin-bottom: 2em;
+    justify-content: space-evenly;
     align-items: center;
+    text-align: center;
+    font-size: 2em;
 }
 
 .contactLinks > a
 {
+    display: flex;
     text-decoration: none;
-    color: var(--textColor);
+    align-self: center;
+    align-items: center;
+    color: var(--redText);
 }
 .contactLinks > a:hover
 {
-    color: var(--color3);
+    color: var(--lightRedText);
+}
+.contactLinks > div
+{
+    display: flex;
+    align-self: center;
+    align-items: center;
+    color: var(--redText);
 }
 
 .socialsImage
 {
-    width: 4em;
+    width: 2em;
+    filter: invert(42%) sepia(9%) saturate(3044%) hue-rotate(319deg) brightness(102%) contrast(107%);
+}
+
+.socialsLinkText
+{
+    padding: 0 1em;
 }
 
 

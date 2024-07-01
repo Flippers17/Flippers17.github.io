@@ -12,7 +12,7 @@ class CustomHeader extends HTMLElement
         <header>
             
             <nav class="navbar">
-                <a href="index.html" class="nav-logo"><h3>Portfolio</h3></a>
+                <a href="index.html" class="nav-logo"><h3>Filip Järlesjö</h3></a>
                 <ul class="nav-menu">
                     <li class="nav-item">
                         <a href="https://www.linkedin.com/in/filip-j%C3%A4rlesj%C3%B6-4a30692b3/" class="nav-link">LinkedIn <img src="iconmonstr-linkedin-3.svg" alt="LinkedIn" class="nav-item-image"></img></a>
