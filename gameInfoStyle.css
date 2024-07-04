@@ -24,6 +24,13 @@ h2
     text-align: left;
 }
 
+.gameVideo
+{
+    width: 100%;
+    aspect-ratio: calc(16/9);
+    max-width: 40em;
+    max-height: 30em;
+}
 
 .gameInfo
 {
@@ -40,8 +47,9 @@ h2
 {
     resize: horizontal;
     width: 100%;
+    aspect-ratio: calc(16/9);
     max-width: 40em;
-    max-height: 20em;
+    max-height: 30em;
     border-radius: 2em;
     margin-bottom: 2em;
 }
