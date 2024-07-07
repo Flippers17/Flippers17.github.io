@@ -116,8 +116,15 @@ h2
     transition: .4s;
     width: 100%;
     top: auto;
+    border: 5px black solid;
 }
 
+.sectionGIF
+{
+    width: 100%;
+    max-width: 60em;
+    border: 5px black solid;
+}
 
 
 .downloadLink
