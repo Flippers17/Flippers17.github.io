@@ -21,7 +21,7 @@ class CustomHeader extends HTMLElement
                         <a href="https://github.com/Flippers17" class="nav-link">GitHub <img src="github-mark/github-mark.svg" alt="GitHub" class="nav-item-image"></img></a>
                     </li>
                     <li class="nav-item">
-                        <a href="#" class="nav-link">option 3</a>
+                        <a href="mailto: filip.jarlesjo@gmail.com" class="nav-link">filip.jarlesjo@gmail.com <img src="Media/email-svgrepo-com.svg" alt="Gmail" class="nav-item-image"></img></a>
                     </li>
                 </ul>
                 <div class="hamburger">

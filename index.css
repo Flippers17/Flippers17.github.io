@@ -1,17 +1,18 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,500;1,400&display=swap');
 
 
-.aboutMeSection
+.introductionSection
 {
-    background-color: var(--darkRedHighlight);
+    background-color: var(--backgroundColor);
     margin: 0;
 
     padding-bottom: 3em;
     padding-top: 2em;
     
+    border-bottom: var(--darkRedHighlight) dotted 7px;
 }
 
-.aboutMeContainer
+.introductionContainer
 {
     display: flex;
     flex-wrap: wrap;
@@ -50,7 +51,7 @@
 .gamesList
 {
     padding-top: 50px;
-    padding-bottom: 20em;
+    padding-bottom: 10em;
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
@@ -140,4 +141,37 @@
 {
     margin: 0 2em;
     margin-bottom: 2em;
+}
+
+.aboutMeSection
+{
+    background-color: var(--backgroundColor);
+    margin: 0;
+    color: var(--lightRedText);
+    padding-top: 1em;
+    padding-bottom: 3em;
+    border-top: var(--darkRedHighlight) dotted 7px;
+}
+
+.aboutMeContainer
+{
+    margin-left: auto;
+    margin-right: auto;
+    width: 90%;
+    max-width: 40em;
+    text-align: center;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    font-size: 1.4em;
+    line-height: 1.6em;
+}
+
+.proficienciesList
+{
+    text-align: left;
+    width: fit-content;
+    padding-right: 5em;
 }
