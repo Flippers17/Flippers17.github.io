@@ -23,6 +23,9 @@ class CustomHeader extends HTMLElement
                     <li class="nav-item">
                         <a href="mailto: filip.jarlesjo@gmail.com" class="nav-link">filip.jarlesjo@gmail.com <img src="Media/email-svgrepo-com.svg" alt="Gmail" class="nav-item-image"></img></a>
                     </li>
+                    <li class="nav-item">
+                        <a href="Media/CV Filip Järlesjö.pdf" class="nav-link">CV</a>
+                    </li>
                 </ul>
                 <div class="hamburger">
                     <span class="bar"></span>

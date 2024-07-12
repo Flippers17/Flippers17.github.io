@@ -150,6 +150,11 @@ header
 .contactLinks > a:hover
 {
     color: var(--lightRedText);
+
+    .socialsImage
+    {
+        filter: invert(68%) sepia(19%) saturate(880%) hue-rotate(318deg) brightness(97%) contrast(96%);
+    }
 }
 .contactLinks > div
 {
@@ -164,6 +169,7 @@ header
     width: 2em;
     filter: invert(42%) sepia(9%) saturate(3044%) hue-rotate(319deg) brightness(102%) contrast(107%);
 }
+
 
 .socialsLinkText
 {

@@ -1,8 +1,34 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,500;1,400&display=swap');
 
+@keyframes fade-in
+{
+    from
+    {
+        transform: translate(0, 50%);
+        opacity: 0%;
+        color: transparent;
+    }
+
+    
+    70%
+    {
+        color: transparent;
+    }
+
+    to
+    {
+        transform: translate(0, 0);
+        opacity: 100%;
+        color: var(--lightRedText);
+    }
+
+    
+}
 
 .introductionSection
 {
+    
+
     background-color: var(--backgroundColor);
     margin: 0;
 
@@ -14,6 +40,9 @@
 
 .introductionContainer
 {
+    animation-name: fade-in;
+    animation-duration: 1s;
+
     display: flex;
     flex-wrap: wrap;
     font-size: 1.8em;
@@ -86,9 +115,23 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    
+    position: relative;
+
     filter: drop-shadow(.6em 1em 0 black);
+    
+    .hoverGIF
+    {
+        transition: .2s;
+        opacity: 0%;
+    }
+
+    .gameMedia
+    {
+        transition: .2s;
+        filter: none;
+    }
 }
+
 
 .gameInfoBox:hover
 {
@@ -101,6 +144,18 @@
     {
         transition-duration: .3s;
         color: var(--lightRedText);
+    }
+
+    .hoverGIF
+    {
+        transition: .3s;
+        opacity: 100%;
+    }
+
+    .gameMedia
+    {
+        transition: .3s;
+        filter: drop-shadow(0 0 .7em black);
     }
 }
 
@@ -118,6 +173,20 @@
     justify-content: center;
     border-bottom: #101010 solid 5px;
     overflow: hidden;
+
+    position: relative;
+
+    
+}
+
+.gameThumbnail
+{
+    position: relative;
+}
+
+.hoverGIF
+{
+    position: absolute;
 }
 
 .gameMedia > img
@@ -127,7 +196,7 @@
 
 .mediaOverlay
 {
-    width: 30rem;
+    width: 100%;
     position: absolute;
     align-self: flex-end;
     text-align: center;
