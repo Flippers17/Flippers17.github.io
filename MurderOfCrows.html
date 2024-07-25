@@ -70,6 +70,7 @@
         <h2>Optimization of the BOIDS</h2>
         <p>
             Like for Disco Demolition Knight, I made some optimizations for the neighbour search part of the algorithm, which in this case I used Octrees for. In this case it was not as necessary, since using Unity’s built in physics overlapping functions gave good enough performance, but it was something I was interested in and wanted to try out. Since it was in 3D, doing something more like what I did in Disco Demolition Knight where I divided the tree into partitions beforehand, would be much less effective, since the amount of space was bigger, and the amount of nodes would increase in a cubical manner. 
+            <img src="Media/MurderOfCrows_OctreeVisual.png" alt="OctreePic" class="sectionGIF">
         </p>
         <p>
             With the octree I had control over what datatype I would store. This was a big benefit, since there were a bunch of different variables that was needed for the calculations, and since I am using an object oriented development environment, each BOIDS-agent could have an instance of a class on it with the information needed, and the octree could store said class. This made working with and expanding the BOIDS-algorithm much easier.
