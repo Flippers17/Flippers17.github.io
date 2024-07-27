@@ -110,8 +110,9 @@ h2
     z-index: 2;
 
     /* transform:translate(50%, 50%); */
-    width: 140%;
+    width: 100%;
     max-width: 80em;
+    max-height: 70vh;
 
     filter: drop-shadow(0 0 5em black);
 }
