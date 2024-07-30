@@ -40,7 +40,7 @@
 
     <div class="gameInfo">
         <h1>Murder of Crows</h1>
-        <img src="TempPic.png" alt="headImage" class="headImage">
+        <iframe src="https://www.youtube.com/embed/oVw0T57SZJM" frameborder="0" class="gameVideo" allow="fullscreen"></iframe>
 
         <p>
             I did this project alone, so all the code was done by me. I did use some 3rd-party assets for some graphics (player character with animation, enemy character with animation, a texture for walls and floors) and one sound (a wing flapping sound for the birds). This project was worked on for about 3 weeks. It was done for a course in University with the prupouse of learning about different AI-technologies in video games. For this project I focused on steering behaviours. In the game, the player controls a character in 3D-space with simple 3D-movement, but also controls a flock of birds that they can use to attack, solve puzzles and block attacks. The movement of the birds were made with these steering behaviours previously mentioned.
@@ -71,6 +71,7 @@
         <p>
             Like for Disco Demolition Knight, I made some optimizations for the neighbour search part of the algorithm, which in this case I used Octrees for. In this case it was not as necessary, since using Unity’s built in physics overlapping functions gave good enough performance, but it was something I was interested in and wanted to try out. Since it was in 3D, doing something more like what I did in Disco Demolition Knight where I divided the tree into partitions beforehand, would be much less effective, since the amount of space was bigger, and the amount of nodes would increase in a cubical manner. 
             <img src="Media/MurderOfCrows_OctreeVisual.png" alt="OctreePic" class="sectionGIF">
+            <img src="Media/MurderOfCrows_OctreeGIF.gif" alt="OctreePic" class="sectionGIF">
         </p>
         <p>
             With the octree I had control over what datatype I would store. This was a big benefit, since there were a bunch of different variables that was needed for the calculations, and since I am using an object oriented development environment, each BOIDS-agent could have an instance of a class on it with the information needed, and the octree could store said class. This made working with and expanding the BOIDS-algorithm much easier.
