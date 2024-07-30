@@ -57,12 +57,13 @@
             <li>Level design (a bit rushed)</li>
             <li>Lighting</li>
         </ul>
-
+        
         <h2>Steering behaviour (BOIDS)</h2>
         <p>
             This was my first time properly developing my own steering behaviour, although I had worked with steering behaviours made by another programmer before. 
             In this case, I did some research on the BOIDS-algorithm, which worked well, since it was birds I was simulating. Most of the sources I found discussed it in a 2-dimensional space, but I was working in a 3-dimensional space, which meant I had to make some adjustments. In most cases, it was just a matter of vector math, which meant there was not much to adjust at all besides performing calculations with 3-dimensional vectors. When it came to obstacle avoidance on the other hand, the problem was a bit more complicated, but I found a solution that would generate a number of evenly distributed points on a sphere, then raycast towards those points to see if any obstacles were in the way. 
         </p>
+        <img src="Media/CrowsShowcaseGIF.gif" alt="crowsGIF" class="sectionGIF">
         <p>
             The different behaviours that were used to create a composite behaviour was separation, cohesion, alignment, target bias and obstacle avoidance. Each behaviour had a weight to it, but also had a force multiplier that would multiply the final output of the individual behaviours. These numbers were altered and tweaked constantly throughout the project, but I think I managed to get some good numbers for the feel I was going for.
         </p>

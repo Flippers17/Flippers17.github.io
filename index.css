@@ -74,20 +74,36 @@
 .informationText
 {
     margin-left: 1em;
-    width: 70%;
+    text-align: center;
+    width: 100%;
+    max-width: 30em;
+}
+
+.gamesSection
+{
+    background-color: var(--backgroundColor);
+    padding-top: 10em;
+    padding-bottom: 10em;
+    width: 100%;
+    text-align: center;
+}
+
+.gamesSectionTitle
+{
+    font-size: 3em;
+    color: var(--redText);
+    text-shadow: 4px 4px .1em black;
 }
 
 .gamesList
 {
-    padding-top: 50px;
-    padding-bottom: 10em;
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: space-around;
     align-items: center;
 
-    background-color: var(--backgroundColor);
+    
 }
 
 .gameHeader
@@ -191,7 +207,10 @@
 
 .gameMedia > img
 {
+    min-height: 100%;
     width: 100%;
+    aspect-ratio: calc(16/9);
+    /* min-width: 100%; */
 }
 
 .mediaOverlay
@@ -243,4 +262,30 @@
     text-align: left;
     width: fit-content;
     padding-right: 5em;
+}
+
+@media only screen and (max-width: 768px)
+{
+
+    .pictureContainer
+    {
+        width: 5em;
+        height: 5em;
+    }
+    
+    .profilePicture
+    {
+        position: absolute;
+        width: 11.5em;
+        transform: translate(-1.6em, -4em);
+    }
+
+    .informationText
+    {
+        font-size: .7em;
+        margin-left: 1em;
+        text-align: center;
+        width: 100%;
+        max-width: 20em;
+    }
 }
