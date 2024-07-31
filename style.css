@@ -62,10 +62,11 @@ body
 .nav-link:hover
 {
     color: var(--color3);
+    text-shadow: 4px 4px .1em black;
 
     .nav-item-image
     {
-        filter: invert(68%) sepia(19%) saturate(880%) hue-rotate(318deg) brightness(97%) contrast(96%);
+        filter: invert(68%) sepia(19%) saturate(880%) hue-rotate(318deg) brightness(97%) contrast(96%) drop-shadow(4px 4px .1em black);
     }
 }
 
@@ -150,10 +151,11 @@ header
 .contactLinks > a:hover
 {
     color: var(--lightRedText);
+    text-shadow: 4px 4px .1em black;
 
     .socialsImage
     {
-        filter: invert(68%) sepia(19%) saturate(880%) hue-rotate(318deg) brightness(97%) contrast(96%);
+        filter: invert(68%) sepia(19%) saturate(880%) hue-rotate(318deg) brightness(97%) contrast(96%) drop-shadow(4px 4px .1em black);
     }
 }
 .contactLinks > div
