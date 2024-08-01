@@ -114,6 +114,7 @@ header
     background-color: var(--headerColor);
     color: var(--redText);
     
+    width: 100%;
     border-top: #101010 3px solid;
     margin: 0;
     display: flex;
