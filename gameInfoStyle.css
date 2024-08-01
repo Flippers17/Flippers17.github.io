@@ -24,6 +24,13 @@ h2
     text-align: left;
 }
 
+.gameTitle
+{
+    font-size: 5em;
+    text-shadow: 0 .2em .2em black;
+    color: var(--textColor);
+}
+
 .gameVideo
 {
     width: 100%;

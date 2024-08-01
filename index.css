@@ -91,7 +91,7 @@
 .gamesSectionTitle
 {
     font-size: 3em;
-    color: var(--redText);
+    color: var(--textColor);
     text-shadow: 4px 4px .1em black;
 }
 
