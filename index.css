@@ -278,8 +278,10 @@
     .profilePicture
     {
         position: absolute;
-        width: 11.5em;
-        transform: translate(-1.6em, -4em);
+        /* width: 11.5em;
+        transform: translate(-1.6em, -4em); */
+        width: 5em;
+        transform: translate(0 , -2.75em);
     }
 
     .informationText
