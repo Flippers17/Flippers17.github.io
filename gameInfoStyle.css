@@ -41,6 +41,7 @@ h2
 
 .gameInfo
 {
+    position: relative;
     color: var(--lightRedText);
     padding: 5em 5em 10em 5em;
     background-color: var(--backgroundColor);
@@ -48,6 +49,8 @@ h2
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
+    text-align: center;
+
 }
 
 .gameInfo>p
@@ -112,12 +115,13 @@ h2
 
 .gridScreenshotContainer.enlarge
 {
-    position: absolute;
+    position: fixed;
     /* transition-duration: .5s; */
     z-index: 2;
+    top: 10%;
 
     /* transform:translate(50%, 50%); */
-    width: 100%;
+    width: 90%;
     max-width: 80em;
     max-height: 70vh;
 
@@ -149,9 +153,10 @@ h2
 {
     transition:ease-in-out .1s;
     width: 100%;
+    overflow: hidden;
     
     text-align: center;
-    padding: 1em;
+    padding: 1em 2.5em;
     font-size: 2em;
     background-color: var(--headerColor);
     color: var(--redText);
@@ -165,3 +170,30 @@ h2
     background-color: rgba(160, 160, 160, 0.829);
 }
 
+@media only screen and (max-width: 768px)
+{
+    .gameInfo>p
+    {
+        font-size: 1em;
+    }
+
+    .contributionsList
+    {
+        font-size: 1em;
+    }
+
+    .gameInfo
+    {
+        padding: 1em 1em 4em 1em;
+    }
+
+    .gameTitle
+    {
+        font-size: 3em;
+    }
+
+    .downloadLink
+    {
+        padding: 1em .5em;
+    }
+}
