@@ -114,6 +114,9 @@ header
     background-color: var(--headerColor);
     color: var(--redText);
     
+    justify-content: space-around;
+    align-items: center;
+    
     width: 100%;
     border-top: #101010 3px solid;
     margin: 0;
@@ -125,7 +128,8 @@ header
 
 .contactHeadline
 {
-    margin-left: 2em;
+    /*margin-left: 2em;*/
+    text-align: center;
 }
 
 .contactLinks
@@ -133,6 +137,7 @@ header
     display: flex;
     flex-wrap: wrap;
 
+    width: 90%;
     margin-top: 1em;
     margin-bottom: 2em;
     justify-content: space-evenly;
@@ -143,10 +148,12 @@ header
 
 .contactLinks > a
 {
+    width: auto;
     display: flex;
     text-decoration: none;
     align-self: center;
     align-items: center;
+    overflow: hidden;
     color: var(--redText);
 }
 .contactLinks > a:hover
@@ -221,6 +228,11 @@ header
     .hamburger.active .bar:nth-child(3)
     {
         transform: translateY(-8px) rotate(-45deg);
+    }
+
+    .contactLinks
+    {
+        font-size: 1em;
     }
 
 }
