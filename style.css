@@ -189,6 +189,7 @@ header
 
 @media only screen and (max-width: 768px) {
     .nav-menu {
+        padding-top: 3em;
         position: fixed;
         right: -100%;
         top: 0;
@@ -199,6 +200,8 @@ header
         border-radius: 10px;
         text-align: center;
         transition: 0.3s;
+
+        z-index: 1;
         box-shadow:
             0 10px 27px rgba(0, 0, 0, 0.05);
     }
@@ -213,6 +216,12 @@ header
     .hamburger {
         display: block;
         cursor: pointer;
+    }
+    .hamburger.active
+    {
+        position: fixed;
+        z-index: 2;
+        right: 25px;
     }
 
     .hamburger.active .bar:nth-child(2)
