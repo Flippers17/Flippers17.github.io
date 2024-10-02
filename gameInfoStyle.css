@@ -37,6 +37,7 @@ h2
     aspect-ratio: calc(16/9);
     max-width: 40em;
     max-height: 30em;
+    padding-bottom: 2em;
 }
 
 .gameInfo

@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="gameInfoStyle.css">
+
+    <script src="index.js" defer></script>
+    <script src="gameInfo.js" defer></script>
+    <script src="components/customHeader.js" type="text/javascript" defer></script>
+    <script src="components/customFooter.js" type="text/javascript" defer></script>
+
+    <title>Downtown Destruction</title>
+</head>
+<body>
+        
+
+<custom-header></custom-header>
+
+<div class="gameInfo">
+    <h1 class="gameTitle">Downtown Destruction</h1>
+    <img src="Media/RunKingMonkeyDowntownDestructionScreenshot1.png" alt="headImage" class="gameVideo">
+
+<!-- 
+    <div class="screenshotsGrid">
+        <div class="gridScreenshotContainer">
+            <img src="Media/FiaKnuffar_Gameplay1.png" alt="screenshot" class="gridScreenshot">
+        </div>
+        <div class="gridScreenshotContainer">
+            <img src="Media/FiaKnuffar_Gameplay2.png" alt="screenshot" class="gridScreenshot">
+        </div>
+        <div class="gridScreenshotContainer">
+            <img src="Media/FiaKnuffar_Gameplay3.png" alt="screenshot" class="gridScreenshot">
+        </div>
+        <div class="gridScreenshotContainer">
+            <img src="Media/FiaKnuffar_Gameplay4.png" alt="screenshot" class="gridScreenshot">
+        </div>
+    </div> -->
+
+    <a href="https://xsayz.itch.io/run-king-monkey-downtown-destruction" class="downloadLink">Play at itch.io</a>
+
+    <p>
+        A game I made with 4 other people for Lame Jam 43. This was the first Game Jam that was not a local Game Jam, but rather an online one, but us who worked on the game mostly worked together in person. This Game Jam was 72 hours long, but I unfortunately did not have time to work on the game during that whole period. The theme for this Game Jam was “Chaos”, and the game is an endless runner, where you are rewarded for running into objects to cause chaos. If you run into humans or boxes, your rage meter will build, and with full rage you can run into any object to earn score.
+    </p>
+
+    <h2>Procedural Generation</h2>
+    <p>
+        For this Jam, I got to use what I learned from my Spelunky prototype regarding Procedural Generation when I programmed the level generation for this game. Like in that prototype, I used a tag system where the ones making prefabs could tag the road sections with different tags depending on where and when that road section should appear. For example, if a road section was meant to appear in the park biome, it would be marked with the “Park” tag. This time, I combined the procedural generation with Object Pooling for spawning in the buildings on the side and the obstacles in the road. 
+    </p>
+    <!-- <img src="Media/FiaKnuffarPushingGIF.gif" alt="GIF" class="sectionGIF"> -->
+
+    <h2>Some of my contributions:</h2>
+    <ul class="contributionsList">
+        <li>First Basic iteration of Player Movement</li>
+        <li>Player Input Handling</li>
+        <li>Procedural Level Generation</li>
+        <li>Object pooling and obstacle spawning</li>
+        <li>Obstacle interactions and hitboxes</li>
+
+    </ul>
+    
+
+</div>
+
+
+    <custom-footer>
+</body>
+</html>
