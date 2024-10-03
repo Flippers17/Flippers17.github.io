@@ -25,6 +25,66 @@
     
 }
 
+
+.gameHighlightSection
+{
+    display: block;
+    position: relative;
+    width: 100%;
+    background-color: var(--backgroundColor);
+    height: 40em;
+}
+
+.gameHighlightBackgroundContainer
+{
+    display: block;
+    overflow: hidden;
+    position: absolute;
+
+    width: 100%;
+    height: 100%;
+    border-bottom: var(--darkRedHighlight) dotted 7px;
+}
+
+.gameHighlightBackgroundImg
+{
+    position: absolute;
+    min-height: 100%;
+    min-width: 100%;
+    filter: opacity(25%);
+}
+
+.highlightedGameInfo
+{
+    color: var(--textColor);
+    flex-wrap: wrap;
+    font-size: 1.8em;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 5em 3em;
+
+    position: relative;
+    align-self: center;
+    display: flex;
+    justify-content: space-around;
+    max-width: 80em;
+}
+
+.highlightedGameMedia
+{
+    width: 20em;
+
+    img{
+        width: 100%;
+    }
+}
+
+.highlightedGameText
+{
+    /* padding-left: 5em; */
+    width: 25em;
+}
+
 .introductionSection
 {
     
@@ -35,7 +95,8 @@
     padding-bottom: 3em;
     padding-top: 2em;
     
-    border-bottom: var(--darkRedHighlight) dotted 7px;
+    /* border-bottom: var(--darkRedHighlight) dotted 7px; */
+    border-top: var(--darkRedHighlight) dotted 7px;
 }
 
 .introductionContainer
@@ -64,6 +125,7 @@
     /* border: 5px var(--headerColor) solid; */
     filter: drop-shadow(0 0 .5em black);
 }
+
 .profilePicture
 {
     position: absolute;
@@ -110,6 +172,8 @@
 
 .gameHeader
 {
+    position: absolute;
+    top: 0;
     transition-duration: .3s;
     width: 100%;
     margin-bottom: 1em;
@@ -128,10 +192,15 @@
     border-radius: 1%;
     /*border: #101010 solid;*/
     padding: 0;
-    width: 30rem;
+    padding-top: 4em;
+    width: 90%;
+    max-width: 90em;
+    /* min-width: 80%; */
     height: 40rem;
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
+    /* flex-wrap: wrap; */
+    justify-content: center;
     align-items: center;
     position: relative;
 
@@ -180,17 +249,23 @@
 .gameMedia
 {
     display: flex;
+    
     width: 100%;
-    height: 50%;
-    max-width: 100%;
-    min-width: auto;
+    /* height: 50%; */
+    aspect-ratio: calc(16/9);
+    max-width: 50em;
+    min-width: 50;
     padding: 0;
     margin-top: 0;
     margin-bottom: 2em;
+    margin-left: 2em;
+    margin-right: 2em;
     align-items: center;
     justify-content: center;
     border-bottom: #101010 solid 5px;
     overflow: hidden;
+
+    border-radius: .5em;
 
     position: relative;
 
@@ -231,6 +306,7 @@
 {
     margin: 0 2em;
     margin-bottom: 2em;
+    width: 80%;
 }
 
 .aboutMeSection
@@ -269,6 +345,11 @@
 
 @media only screen and (max-width: 768px)
 {
+
+    .gameInfoBox
+    {
+        flex-wrap: wrap;
+    }
 
     .pictureContainer
     {
