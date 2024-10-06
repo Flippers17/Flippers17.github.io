@@ -146,7 +146,7 @@
 .gamesSection
 {
     background-color: var(--backgroundColor);
-    padding-top: 10em;
+    padding-top: 3em;
     padding-bottom: 10em;
     width: 100%;
     text-align: center;
@@ -162,12 +162,11 @@
 .gamesList
 {
     display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
+    /* flex-direction: row;
+    flex-wrap: wrap; */
+    flex-direction: column;
     justify-content: space-around;
     align-items: center;
-
-    
 }
 
 .gameHeader
@@ -183,7 +182,7 @@
 
 .gameInfoBox
 {
-    margin-top: 6em;
+    
     transition-duration: .3s;
     text-decoration: none;
     text-decoration-color: rgb(0, 0, 0, 0);
@@ -191,12 +190,14 @@
     background-color: var(--headerColor);
     border-radius: 1%;
     /*border: #101010 solid;*/
+
+    margin-top: 3em;
     padding: 0;
     padding-top: 4em;
     width: 90%;
     max-width: 90em;
     /* min-width: 80%; */
-    height: 40rem;
+    height: fit-content;
     display: flex;
     flex-direction: row;
     /* flex-wrap: wrap; */
@@ -306,7 +307,24 @@
 {
     margin: 0 2em;
     margin-bottom: 2em;
+    font-size: 1.2em;
     width: 80%;
+    font-family: 'Courier New', Courier, monospace;
+
+    li
+    {
+        font-style: normal;
+        font-weight: bold;
+    }
+}
+
+.gameSeparator
+{
+    margin-top: 35px;
+    width: 70%;
+    max-width: 80em;
+    height: 7px;
+    border-bottom: var(--darkRedHighlight) dotted 7px;
 }
 
 .aboutMeSection
