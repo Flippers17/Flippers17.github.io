@@ -40,7 +40,7 @@ class CustomHeader extends HTMLElement
                 </div>
             </nav>
         
-    <   /header>
+        </header>
         `
     }
 }
