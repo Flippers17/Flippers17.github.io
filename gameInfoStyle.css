@@ -2,11 +2,12 @@
 
 
 
+
 p
 {
-    font-family: 'Roboto';
-    font-size: 1em;
-    max-width: 40em;
+    font-family:'Courier New', Courier, monospace;
+    /* font-size: 1em; */
+    /* max-width: 40em; */
 }
 
 h1
@@ -15,12 +16,15 @@ h1
 }
 h2
 {
-    margin-top: 3em;
+    /* margin-top: 3em; */
     color: var(--redText);
 }
 .contributionsList
 {
-    font-size: 1.4em;
+    font-family:'Courier New', Courier, monospace;
+    font-weight: bold;
+    font-size: 1em;
+    width: fit-content;
     text-align: left;
 }
 
@@ -34,10 +38,11 @@ h2
 .gameVideo
 {
     width: 100%;
+    /* height: auto; */
     aspect-ratio: calc(16/9);
-    max-width: 40em;
-    max-height: 30em;
-    padding-bottom: 2em;
+    /* max-width: 40em; */
+    /* max-height: 30em; */
+    /* padding-bottom: 2em; */
 }
 
 .gameInfo
@@ -57,6 +62,45 @@ h2
 .gameInfo>p
 {
     font-size: 1.4em;
+}
+
+
+.chunk
+{
+    flex-wrap: nowrap;
+    position: relative;
+    /* font-size: 1.4em; */
+    display: flex;
+    justify-content: center;
+    align-items: start;
+    flex-direction: row;
+    width: 100%;
+    max-width: 100em;
+    height: fit-content;
+}
+
+.chunkText>p
+{
+    font-size: 1em;
+}
+
+.chunkText
+{
+    margin: 0 1em;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: fit-content;
+}
+
+.chunkMedia
+{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
 }
 
 /* .headImage
@@ -173,6 +217,11 @@ h2
 
 @media only screen and (max-width: 768px)
 {
+    .chunk
+    {
+        flex-wrap: wrap;    
+    }
+
     .gameInfo>p
     {
         font-size: 1em;

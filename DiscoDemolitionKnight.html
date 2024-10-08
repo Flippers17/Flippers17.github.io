@@ -41,7 +41,35 @@
 
     <div class="gameInfo">
         <h1 class="gameTitle">Disco Demolition Knight</h1>
-        <iframe src="https://www.youtube.com/embed/_jQSaLahs4k" frameborder="0" class="gameVideo" allow="fullscreen"></iframe>
+
+        <div class="chunk">
+            <div class="chunkMedia">
+                <iframe src="https://www.youtube.com/embed/_jQSaLahs4k" frameborder="0" class="gameVideo" allow="fullscreen"></iframe>
+            </div>
+            
+            <div class="chunkText">
+                <p>
+                    This is a project I did together with 11 other people, with the focus mostly just on making a fun game in order to improve our skills. The hook of this game was that your shots would fire in sync with the music and also add another track of sounds to the music when fired. Working with this many people on one project was also a new experience, from which I learnt a lot. This is probably also the biggest project I have worked on so far, at least in scope and resources, considering we were 12 people, although we only worked on it for about 8 weeks.
+                </p>
+                <h2>Some of my contributions:</h2>
+                <ul class="contributionsList">
+                    <li>The shooting mechanic where shooting is in sync with the music</li>
+                    <li>Player input system</li>
+                    <li>Player Movement</li>
+                    <li>Player stats system</li>
+                    <li>Utility system and logic to make adding utilities easier</li>
+                    <li>Player Weapon logic</li>
+                    <li>Upgrade system for the player</li>
+        
+                    <h5>Outside of programming:</h5>
+                    <li>(Some) Lighting</li>
+                    <li>Visual effects ((Most) Player Projectiles, Hit effects, green waves for conga upgrade, etc.)</li>
+                    <li>A bit of shaders</li>
+                    <li>A few design decisions</li>
+                </ul>
+            </div>
+            
+        </div>
 
         <!-- <img src="Media/TempPic.png" alt="headImage" class="headImage"> -->
         
@@ -64,7 +92,7 @@
         
         <a href="https://filipjarlesjo.itch.io/disco-demolition-knight" class="downloadLink">Download at itch.io</a>
         
-        <p>
+        <!-- <p>
             This is a project I did together with 11 other people, with the focus mostly just on making a fun game in order to improve our skills. The hook of this game was that your shots would fire in sync with the music and also add another track of sounds to the music when fired. Working with this many people on one project was also a new experience, from which I learnt a lot. This is probably also the biggest project I have worked on so far, at least in scope and resources, considering we were 12 people, although we only worked on it for about 8 weeks.
         </p>
         <h2>Some of my contributions:</h2>
@@ -82,17 +110,26 @@
             <li>Visual effects ((Most) Player Projectiles, Hit effects, green waves for conga upgrade, etc.)</li>
             <li>A bit of shaders</li>
             <li>A few design decisions</li>
-        </ul>
+        </ul> -->
         <h2>Syncing gameplay to the music</h2>
         <p>
             My biggest role in this project was the programming of this feature, and so I worked closely with the musician of our team. From this project, I learned alot about the tool FMOD, used for implementing sounds and/or music in game engines like Unity, since we needed this sort of tool in order to make this kind of game. Certain aspects of a FMOD project could be listened to as if they were events, which we used to our advantage. Because of some quirks with the FMOD engine, some workarounds were used in the FMOD-project in order to make it actually sync, as it would be off sync otherwise.
         </p>
 
-        <h2>Inventory system</h2>
-        <p>
-            Another thing I think turned out fairly well was the inventory system. It wasn’t anything advanced or anything, but because of it, I could separate logic for using weapons and utilities from what is available for the player to use. This type of cohesion makes programming features a lot easier, and helped out a lot during development.    
-        </p>
-        <img src="Media/DDK_InventoryGIF.gif" alt="GIF" class="sectionGIF">
+        <div class="chunk">
+            <div class="chunkMedia">
+                <img src="Media/DDK_InventoryGIF.gif" alt="GIF" class="sectionGIF">
+            </div>
+
+            <div class="chunkText">
+                <h2>Inventory system</h2>
+                <p>
+                    Another thing I think turned out fairly well was the inventory system. It wasn’t anything advanced or anything, but because of it, I could separate logic for using weapons and utilities from what is available for the player to use. This type of cohesion makes programming features a lot easier, and helped out a lot during development.    
+                </p>
+        
+            </div>
+        </div>
+        
 
         <h2>Optimizing enemy flocks</h2>
         <p>
