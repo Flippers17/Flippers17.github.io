@@ -13,70 +13,78 @@
 
 </head>
 <body>
-    <!-- <header>
-        
-        <nav class="navbar">
-            <a href="index.html" class="nav-logo"><h3>Portfolio</h3></a>
-            <ul class="nav-menu">
-                <li class="nav-item">
-                    <a href="#" class="nav-link">option 1</a>
-                </li>
-                <li class="nav-item">
-                    <a href="#" class="nav-link">option 2</a>
-                </li>
-                <li class="nav-item">
-                    <a href="#" class="nav-link">option 3</a>
-                </li>
-            </ul>
-            <div class="hamburger">
-                <span class="bar"></span>
-                <span class="bar"></span>
-                <span class="bar"></span>
-            </div>
-        </nav>
-        
-    </header> -->
+    
     <custom-header></custom-header>
 
     <div class="gameInfo">
         <h1 class="gameTitle">Murder of Crows</h1>
-        <iframe src="https://www.youtube.com/embed/oVw0T57SZJM" frameborder="0" class="gameVideo" allow="fullscreen"></iframe>
-
-        <p>
-            I did this project alone, so all the code was done by me. I did use some 3rd-party assets for some graphics (player character with animation, enemy character with animation, a texture for walls and floors) and one sound (a wing flapping sound for the birds). This project was worked on for about 3 weeks. It was done for a course in University with the prupouse of learning about different AI-technologies in video games. For this project I focused on steering behaviours. In the game, the player controls a character in 3D-space with simple 3D-movement, but also controls a flock of birds that they can use to attack, solve puzzles and block attacks. The movement of the birds were made with these steering behaviours previously mentioned.
-        </p>
-        <h2>Some of my contributions:</h2>
-        <ul class="contributionsList">
-            <li>Steering behaviours/boids for the crows (alignment, cohesion, separation, obstacle avoidance, target bias)</li>
-            <li>Octree data structure optimization for the crows when getting context (nearby agents)</li>
-            <li>Simple 3D character movement</li>
-            <li>Enemy and player state-machine (extremly simple)</li>
-
-            <h5>Outside of programming:</h5>
-            <li>Some 3D-modeling and animation (birds)</li>
-            <li>Level design (a bit rushed)</li>
-            <li>Lighting</li>
-        </ul>
         
-        <h2>Steering behaviour (BOIDS)</h2>
-        <p>
-            This was my first time properly developing my own steering behaviour, although I had worked with steering behaviours made by another programmer before. 
-            In this case, I did some research on the BOIDS-algorithm, which worked well, since it was birds I was simulating. Most of the sources I found discussed it in a 2-dimensional space, but I was working in a 3-dimensional space, which meant I had to make some adjustments. In most cases, it was just a matter of vector math, which meant there was not much to adjust at all besides performing calculations with 3-dimensional vectors. When it came to obstacle avoidance on the other hand, the problem was a bit more complicated, but I found a solution that would generate a number of evenly distributed points on a sphere, then raycast towards those points to see if any obstacles were in the way. 
-        </p>
-        <img src="Media/CrowsShowcaseGIF.gif" alt="crowsGIF" class="sectionGIF">
-        <p>
-            The different behaviours that were used to create a composite behaviour was separation, cohesion, alignment, target bias and obstacle avoidance. Each behaviour had a weight to it, but also had a force multiplier that would multiply the final output of the individual behaviours. These numbers were altered and tweaked constantly throughout the project, but I think I managed to get some good numbers for the feel I was going for.
-        </p>
 
-        <h2>Optimization of the BOIDS</h2>
-        <p>
-            Like for Disco Demolition Knight, I made some optimizations for the neighbour search part of the algorithm, which in this case I used Octrees for. In this case it was not as necessary, since using Unity’s built in physics overlapping functions gave good enough performance, but it was something I was interested in and wanted to try out. Since it was in 3D, doing something more like what I did in Disco Demolition Knight where I divided the tree into partitions beforehand, would be much less effective, since the amount of space was bigger, and the amount of nodes would increase in a cubical manner. 
-            <img src="Media/MurderOfCrows_OctreeVisual.png" alt="OctreePic" class="sectionGIF">
-            <img src="Media/MurderOfCrows_OctreeGIF.gif" alt="OctreePic" class="sectionGIF">
-        </p>
-        <p>
-            With the octree I had control over what datatype I would store. This was a big benefit, since there were a bunch of different variables that was needed for the calculations, and since I am using an object oriented development environment, each BOIDS-agent could have an instance of a class on it with the information needed, and the octree could store said class. This made working with and expanding the BOIDS-algorithm much easier.
-        </p>
+        <div class="chunk">
+            <div class="chunkMedia">
+                <iframe src="https://www.youtube.com/embed/oVw0T57SZJM" frameborder="0" class="gameVideo" allow="fullscreen"></iframe>
+            </div>
+
+            <div class="chunkText">
+                <p>
+                    I did this project alone, so all the code was done by me, but I did use some 3rd-party assets for some graphics. This project was worked on for about 3 weeks. For this project I focused on learning about steering behaviours. In the game, the player controls a character in 3D-space with simple 3D-movement, but also controls a flock of birds that they can use to attack, solve puzzles and block attacks. The movement of the birds were made with these steering behaviours previously mentioned.
+                </p>
+                <h2>Some of my contributions:</h2>
+                <ul class="contributionsList">
+                    <li>Steering behaviours/boids for the crows (alignment, cohesion, separation, obstacle avoidance, target bias)</li>
+                    <li>Octree data structure optimization for the crows when getting context (nearby agents)</li>
+                    <li>Simple 3D character movement</li>
+                    <li>Enemy and player state-machine (extremly simple)</li>
+        
+                    <h5>Outside of programming:</h5>
+                    <li>Some 3D-modeling and animation (birds)</li>
+                    <li>Level design (a bit rushed)</li>
+                    <li>Lighting</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="chunk">
+            <div class="chunkText">
+                <h2>Steering behaviour (BOIDS)</h2>
+                <p>
+                    This was my first time properly developing my own steering behaviour, although I had worked with steering behaviours made by another programmer before. 
+                    When it came to obstacle avoidance, it was a bit complicated to do in 3D, but I found a solution that would generate a number of evenly distributed points on a sphere, then raycast towards those points to see if any obstacles were in the way. 
+                </p>
+                
+                <p>
+                    The different behaviours that were used to create a composite behaviour was separation, cohesion, alignment, target bias and obstacle avoidance. Each behaviour had a weight to it, but also had a force multiplier that would multiply the final output of the individual behaviours. These numbers were altered and tweaked constantly throughout the project, but I think I managed to get some good numbers for the feel I was going for.
+                </p>
+            </div>
+
+            <div class="chunkMedia">
+                <img src="Media/CrowsShowcaseGIF.gif" alt="crowsGIF" class="sectionGIF">
+            </div>
+        </div>
+
+        <div class="chunk">
+            
+
+            <div class="chunkMedia">
+                <img src="Media/MurderOfCrows_OctreeVisual.png" alt="OctreePic" class="sectionGIF">
+                <img src="Media/MurderOfCrows_OctreeGIF.gif" alt="OctreePic" class="sectionGIF">
+            </div>
+
+            <div class="chunkText">
+                <h2>Optimization of the BOIDS</h2>
+                <p>
+                    Like for Disco Demolition Knight, I made some optimizations for the neighbour search part of the algorithm, which in this case I used Octrees for. In this case it was not as necessary, since using Unity’s built in physics overlapping functions gave good enough performance, but it was something I was interested in and wanted to try out. Since it was in 3D, doing something more like what I did in Disco Demolition Knight where I divided the tree into partitions beforehand, would be much less effective, since the amount of space was bigger, and the amount of nodes would increase in a cubical manner. 
+                    
+                </p>
+                
+            </div>
+        </div>
+
+        
+        
+        
+
+        
 
     </div>
 
