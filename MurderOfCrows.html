@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Murder of Crows</title>
+    <title>Murder of Crows + BOIDS in Unity DOTS</title>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="gameInfoStyle.css">
 
@@ -18,8 +18,26 @@
     <custom-header></custom-header>
 
     <div class="gameInfo">
-        <h1 class="gameTitle">Murder of Crows</h1>
+        <h1 class="gameTitle">Murder of Crows + BOIDS in Unity DOTS</h1>
         
+
+        <div class="chunk">
+            <div class="chunkMedia">
+                <img src="Media/DotsBoids.gif" alt="Birds flying around" class="sectionGIF">
+            </div>
+
+            <div class="chunkText">
+                <p>
+                    I later wrote a different version of BOIDS that was dataoriented in Unity DOTS. Using the Entity Component System, Jobs and Burst Compiler in Unity DOTS, I was able to get a lot more performance with at least 5 times better performance. This implementation also used an octree for optimization.
+                </p>
+                <h2>Some of my contributions:</h2>
+                <ul class="contributionsList">
+                    <li>Steering behaviours/boids for the crows (alignment, cohesion, separation, obstacle avoidance, target bias)</li>
+                    <li>Octree data structure optimization for the crows when getting context (nearby agents)</li>
+                    <li>Dataoriented implementation of BOIDS with Unity DOTS</li>
+                </ul>
+            </div>
+        </div>
 
         <div class="chunk">
             <div class="chunkMedia">
