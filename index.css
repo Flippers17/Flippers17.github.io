@@ -188,7 +188,7 @@
     text-decoration-color: rgb(0, 0, 0, 0);
     color: var(--lightRedText);
     background-color: var(--headerColor);
-    border-radius: 1%;
+    border-radius: .8em;
     /*border: #101010 solid;*/
 
     margin-top: 3em;
