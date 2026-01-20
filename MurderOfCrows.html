@@ -10,6 +10,7 @@
     <script src="index.js" defer></script>
     <script src="components/customHeader.js" type="text/javascript" defer></script>
     <script src="components/customFooter.js" type="text/javascript" defer></script>
+    <script src="gameInfo.js" defer></script>
     <link rel="icon" href="Media/PlayerSprite.png">
 
 </head>
@@ -27,15 +28,27 @@
             </div>
 
             <div class="chunkText">
+                <h2>Using Unity DOTS</h2>
                 <p>
-                    I later wrote a different version of BOIDS that was dataoriented in Unity DOTS. Using the Entity Component System, Jobs and Burst Compiler in Unity DOTS, I was able to get a lot more performance with at least 5 times better performance. This implementation also used an octree for optimization.
+                    I later wrote a different version of BOIDS that was dataoriented in Unity DOTS. Using the Entity Component System, Jobs and Burst Compiler in Unity DOTS, I was able to get a lot more performance with at least 5 times better performance.
                 </p>
-                <h2>Some of my contributions:</h2>
+
+                <div class="readMoreButton">
+                    Read more...
+                </div>
+                <p class="optionalText">
+                    This implementation also used an octree for optimization. The hardest part here, besides just learning how DOTS worked in general, was to convert my Octree solution to a data oriented solution, since it was heavily object oriented before.
+                    This was also the first time I properly did parallelization on the CPU, which was a bit hard to grasp at first. However, after writing everything in a data oriented way, parallelization was not too difficult of a task.
+                </p>
+                <div class="showLessButton">
+                    Show less...
+                </div>
+                <!-- <h2>Some of my contributions:</h2>
                 <ul class="contributionsList">
                     <li>Steering behaviours/boids for the crows (alignment, cohesion, separation, obstacle avoidance, target bias)</li>
                     <li>Octree data structure optimization for the crows when getting context (nearby agents)</li>
                     <li>Dataoriented implementation of BOIDS with Unity DOTS</li>
-                </ul>
+                </ul> -->
             </div>
         </div>
 
@@ -70,10 +83,16 @@
                     This was my first time properly developing my own steering behaviour, although I had worked with steering behaviours made by another programmer before. 
                     When it came to obstacle avoidance, it was a bit complicated to do in 3D, but I found a solution that would generate a number of evenly distributed points on a sphere, then raycast towards those points to see if any obstacles were in the way. 
                 </p>
-                
-                <p>
-                    The different behaviours that were used to create a composite behaviour was separation, cohesion, alignment, target bias and obstacle avoidance. Each behaviour had a weight to it, but also had a force multiplier that would multiply the final output of the individual behaviours. These numbers were altered and tweaked constantly throughout the project, but I think I managed to get some good numbers for the feel I was going for.
+                <div class="readMoreButton">
+                    Read more...
+                </div>
+                <p class="optionalText">
+                    The different behaviours that were used to create a composite behaviour was separation, cohesion, alignment, target bias and obstacle avoidance. 
+                    Each behaviour had a weight to it, but also had a force multiplier that would multiply the final output of the individual behaviours. These numbers were altered and tweaked constantly throughout the project, but I think I managed to get some good numbers for the feel I was going for.
                 </p>
+                <div class="showLessButton">
+                    Show less...
+                </div>
             </div>
 
             <div class="chunkMedia">
@@ -92,10 +111,20 @@
             <div class="chunkText">
                 <h2>Optimization of the BOIDS</h2>
                 <p>
-                    Like for Disco Demolition Knight, I made some optimizations for the neighbour search part of the algorithm, which in this case I used Octrees for. In this case it was not as necessary, since using Unity’s built in physics overlapping functions gave good enough performance, but it was something I was interested in and wanted to try out. Since it was in 3D, doing something more like what I did in Disco Demolition Knight where I divided the tree into partitions beforehand, would be much less effective, since the amount of space was bigger, and the amount of nodes would increase in a cubical manner. 
+                    Like for Disco Demolition Knight, I made some optimizations for the neighbour search part of the algorithm, which in this case I used Octrees for. In this case it was not as necessary, since using Unity’s built-in physics overlapping functions gave good enough performance, but it was something I was interested in and wanted to try out. Since it was in 3D, doing something more like what I did in Disco Demolition Knight where I divided the tree into partitions beforehand, would be much less effective, since the amount of space was bigger, and the amount of nodes would increase in a cubical manner. 
                     
                 </p>
-                
+                <div class="readMoreButton">
+                    Read more...
+                </div>
+                <p class="optionalText">
+                    With the octree I had control over what datatype I would store. 
+                    This was a big benefit, since there were a bunch of different variables that was needed for the calculations, and since I am using an object oriented development environment, each BOIDS-agent could have an instance of a class on it with the information needed, 
+                    and the octree could store said class. This made working with and expanding the BOIDS-algorithm much easier.
+                </p>
+                <div class="showLessButton">
+                    Show less...
+                </div>
             </div>
         </div>
 

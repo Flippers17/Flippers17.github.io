@@ -75,6 +75,7 @@
                     The enemy movement logic was at the beginning done mostly by another programmer, using the BOIDS-algorithm to get a sort of flocking behaviour. When it was time for us to try running our game on some less powerful machines, we quickly noticed that rounds where hundreds of enemies would be in play at the same time would run pretty poorly.
                     To improve this, I made a sort of space partitioning system to speed up the neighbour finding process.     
                 </p>
+                
             </div>
 
             <div class="chunkText">
@@ -82,6 +83,20 @@
                 <p>
                     My biggest role in this project was the programming of this feature, and so I worked closely with the musician of our team. From this project, I learned alot about the tool FMOD, used for implementing sounds and/or music in game engines like Unity. Because of some quirks with the FMOD engine, some workarounds were used in the FMOD-project in order to make it actually sync, as it would be off sync otherwise.
                 </p>
+                <div class="readMoreButton">
+                    Read more...
+                </div>
+                <p class="optionalText">
+                    In the game, we had multiple weapons that would all shoot at different intervals. This meant that we could not just fire the weapons at a predetermined rate. The rate at which the weapons would fire could also be irregular in order to time it to the music, which was another reason we could not just set a firing rate per weapon. 
+                    Setting a firing rate in Unity would also be prone to de-syncing the shots from the music. We wanted a solution that would allow us to easily mark where in the music the weapons would fire inside of FMOD, that could also be easily read in Unity. 
+                    After testing plenty of solutions, we eventually settled with using custom markers in FMOD and listening to an event that FMOD would trigger each time a marker was passed. 
+                    In Unity, each weapon would have a string to identify its marker in FMOD. This was used for both active weapons (weapons the player actively shoots with) and passive weapons (upgrades that would always be on and do some effect in sync with the music). 
+                    Due to how FMOD works, some workarounds were needed, as the information about what marker was passed needed to be stored in a handle object, which also needed to be manually disposed of after usage. 
+                    A big priority was to get a solution that would be easy to use and streamline adding more weapons in the future, which I would say we eventually got.
+                </p>
+                <div class="showLessButton">
+                    Show less...
+                </div>
             </div>
         </div>
         

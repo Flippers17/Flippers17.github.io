@@ -101,7 +101,57 @@ h2
 
     background-color: var(--color5);
     border-radius: 1em;
+
+    .optionalText{
+        display: none;
+    }
+
+    .readMoreButton{
+        display: block;
+    }
+
+    .showLessButton{
+        display: none;
+    }
 }
+
+.chunkText.showOptionalText{
+    .optionalText{
+        display: block;
+    }
+
+    .readMoreButton{
+        display: none;
+    }
+
+    .showLessButton{
+        display: block;
+    }
+}
+
+.readMoreButton{
+    cursor: pointer;
+    user-select: none;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color:var(--textColor);
+}
+
+.readMoreButton:hover{
+    color: var(--redText);
+}
+
+.showLessButton{
+    cursor: pointer;
+    user-select: none;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color:var(--textColor);
+}
+
+.showLessButton:hover{
+    color: var(--redText);
+}
+
+
 
 .chunkMedia
 {

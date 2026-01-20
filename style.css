@@ -47,6 +47,13 @@ body
 .nav-item
 {
     margin-left: 5rem;
+    outline: #101010;
+    outline-width: 5px;
+    text-shadow:
+    -2px -2px 0 #000,
+    2px -2px 0 #000,
+    -2px 2px 0 #000,
+    2px 2px 0 #000;
 }
 
 .nav-link
