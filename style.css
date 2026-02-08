@@ -27,12 +27,22 @@ body
     font-family: 'Roboto', sans-serif;
 }
 
+.headerTextContainer{
+    color: var(--textColor);
+    font-size: 2em;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
 .navbar
 {
     display: flex;
     justify-content: space-between;
+    width: 95%;
     align-items: center;
     padding: 1rem 1.5rem;
+    /* padding-bottom: 18em; */
 }
 
 .nav-menu{
@@ -95,8 +105,13 @@ body
 
 header
 {
-    background-color: var(--headerColor);
+    background-color:#858585;
+    background-image: url("Media/MurderOfCrows_OctreeVisual.png");
+    background-blend-mode: multiply;
     border-bottom: 1px solid var(--color6);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 .hamburger
@@ -111,7 +126,7 @@ header
     margin: 5px auto;
     -webkit-transition: all .3s ease-in-out;
     transition: all .3s ease-in-out;
-    background-color: #101010;
+    background-color: #ffffff;
 }
 
 
@@ -229,6 +244,9 @@ header
         position: fixed;
         z-index: 2;
         right: 25px;
+        .bar{
+            background-color: #2b2b2b;
+        }
     }
 
     .hamburger.active .bar:nth-child(2)

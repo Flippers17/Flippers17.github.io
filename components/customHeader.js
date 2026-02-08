@@ -39,7 +39,15 @@ class CustomHeader extends HTMLElement
                     <span class="bar"></span>
                 </div>
             </nav>
-        
+
+            <div class="headerTextContainer">
+                <h1>
+                    Filip Järlesjö
+                </h1>
+                <p>
+                    Gameplay and optimization
+                </p>
+            </div>
         </header>
         `
     }
