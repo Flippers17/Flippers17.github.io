@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Beyond Zero</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="gameInfoStyle.css">
+
+    <script src="index.js" defer></script>
+    <script src="components/customHeader.js" type="text/javascript" defer></script>
+    <script src="components/customFooter.js" type="text/javascript" defer></script>
+    <script src="gameInfo.js" defer></script>
+    <link rel="icon" href="Media/PlayerSprite.png">
+
+</head>
+<body>
+    
+    <custom-header></custom-header>
+
+    <div class="gameInfo">
+        <h1 class="gameTitle">Beyond Zero</h1>
+        
+
+        <div class="chunk">
+            <div class="chunkMedia">
+                <img src="Media/AttackingShowcase.gif" alt="Attacking stuff" class="sectionGIF">
+            </div>
+
+            <div class="chunkText">
+                <h2>Combat</h2>
+                <p>
+                    The combat systems I made for this game include hitbox- and hurtbox-system, enemy targeting, “weapon” data containing information about attacks, and an AttackingHandler component that handles attack logic. These systems were used for both the player and enemies.
+                </p>
+                <p>
+                    An important part of these systems was for them to be scalable and easy to work with. All these parts of the combat systems have high cohesion, making it easier to expand upon combat with new systems, as well as modify existing parts of combat. 
+                </p>
+
+                <h2>Some of my contributions:</h2>
+                <ul class="contributionsList">
+                    <li>Hitbox- and hurtbox-systems</li>
+                    <li>Attack logic and attack data editor</li>
+                    <li>Player Behaviour</li>
+                    <li>Some logic behind hierarchical state machine</li>
+                    <li>Enemy movement</li>
+                </ul>
+            </div>
+        </div>
+
+
+
+        <div class="chunk">
+
+            <div class="chunkText">
+                <h2>Hitboxes & Hurtboxes</h2>
+                <p>
+                    The hitboxes and hurtboxes are mostly used as an abstraction layer between the entity getting attacked, the attacker, and the collision detection. 
+                    The collision detection for the attacks make use of Unity’s built-in physics, but the hitboxes also contain a bunch of other data about the attack that can be read by the attacked entity through the hurtbox system. 
+
+                    
+                </p>
+
+                <div class="readMoreButton">
+                    Read more...
+                </div>
+                <p class="optionalText">
+                    This makes it easier to implement any new kind of secondary effect of the attacks, such as if an attack also sets the target on fire, or if it deals knockback. 
+                    The implementation of how the target is affected can then be very separated from the hit detection, contributing to better cohesion, easier workflow, and better scalability. 
+                </p>
+                <div class="showLessButton">
+                    Show less...
+                </div>
+            </div>
+
+            <div class="chunkMedia">
+                <img src="Media/WeaponShowcase.gif" alt="Attacking stuff" class="sectionGIF">
+            </div>
+            
+        </div>
+
+
+
+
+        <div class="chunk">
+            
+            <div class="chunkMedia">
+                <img src="Media/AttackEdit.gif" alt="crowsGIF" class="sectionGIF">
+            </div>
+
+            <div class="chunkText">
+                <h2>Attacks System</h2>
+                <p>
+                    The attack system is very data driven, where the AttackingHandler script takes the data for an attack and takes care of the general behaviour of the attacks, 
+                    which includes spawning hitboxes with the right data at the right time, calculating where the attacker should move and playing visual effects. 
+
+                    The data for the attack are stored in separate assets. These assets contain everything about the attack, like how long the attack is, how the movement should be, its damage and knockback, and so on. 
+                    I spent a lot of time learning Unity’s UI Toolkit to be able to make better tools for creating attacks.
+                </p>
+                <div class="readMoreButton">
+                    Read more...
+                </div>
+                <p class="optionalText">
+                    The biggest challenge tool-wise was how to make it easy to design the hitboxes for the attacks. 
+                    I thought about making my own editor window first, but decided to instead make use of Unity’s already existing scene view, since this was already easy to use and would also save me some time. 
+                    I made it so that you can drag and drop an object from the scene hierarchy into a “copy from” field, which would then copy its transform components, as well as its position in the hierarchy, 
+                    which could then be used to spawn projectiles and other things as child objects to certain points on the attacker. 
+                </p>
+                <p class="optionalText">
+                    With this solution, you can easily design the size, rotation and position of the hitboxes in Unity’s scene view. In the future, it would be fun to explore a solution with a separate editor window with controls slightly more adjusted to this specific need. 
+                    Timing was also important for the hitboxes, since the attacks need to match the animations. For this, I also added a button that would copy the time from the handle in the animation timeline. 
+                    With these tools, I think I made the workflow for creating new attacks fairly easy.
+                </p>
+                <div class="showLessButton">
+                    Show less...
+                </div>
+            </div>
+
+            
+        </div>
+
+        <div class="chunk">
+            
+
+            
+
+             <div class="chunkText">
+                <h2>Hierarchical state machine</h2>
+                <p>
+                    Like with most of the combat, I wanted the enemy behaviour to be data driven to make the iterative process of creating new enemies faster. 
+                    The enemy behaviour is controlled by a hierarchical state machine that another programmer worked on at first, 
+                    but I helped in coming up with its structure and later reworked the condition system, fixed some inspector problems and added other features that would make it more data driven. 
+                </p>
+                <div class="readMoreButton">
+                    Read more...
+                </div>
+                <p class="optionalText">
+                    A lot of time went into making a working hierarchy in the inspector window of Unity that would determine the hierarchy of the states. 
+                    The hierarchy in the inspector is stored in an editor-only tree-view object while the states themselves are stored in a non-hierarchical list. 
+                    We tried one solution for having hierarchical states, with each state having their own list of children, but we ran into serialization problems, 
+                    and it felt harder to keep track of the code in this solution. 
+                    We instead stored the states’ parent state and their first child state as an id for in the editor that is then converted to the right index in the list before runtime in order to allow reordering in the list. 
+                    The treeview in the inspector is then recursively created from the list of states in the state machine, and dragging and dropping the states updates the parent ID.
+                </p>
+                <p class="optionalText">
+                    For the updated criteria system, I wanted it to be easy to select among the set of the existing criteria, which led me to make the criteria selection a drop down menu. 
+                    Settings for the criteria would only show if that criteria was selected to make the tool more user friendly.
+                </p>
+                <div class="showLessButton">
+                    Show less...
+                </div>
+            </div>
+
+
+            <div class="chunkMedia">
+                <img src="Media/StateMachine.gif" alt="OctreePic" class="sectionGIF">
+            </div>
+            
+        </div>
+
+
+        <div class="chunk">
+
+           
+
+
+            <div class="chunkText">
+                <h2>Enemy Movement</h2>
+                <p>
+                    We wanted to be able to create many different types of enemies without writing any new code, and so being able to easily create differing movement-types between the enemies was important. 
+                    I decided to separate general movement logic for enemies into its own script to make maintenance and scaling up easier, 
+                    then make the kind of movement be determined by a composite steering behaviour that could be made by combining a set of existing steering behaviours. 
+                      
+                </p>
+                
+                <p>
+                    This way, their specific types of movement could be created by combining different steering behaviours and tweaking their settings, 
+                    which meant we no longer had to create new scripts for every new movement behaviour. 
+                    It was also easier to expand the steering behaviours or add new ones than making entirely new logic.
+                </p>
+            </div>
+
+            <div class="chunkText">
+                <h2>Player Behaviour</h2>
+                <p>
+                    The overall player behaviour is separated into multiple scripts, all of which are handled by a handler class, PlayerBehaviour, which acts as the central hub that uses the different functionalities of the different player scripts. 
+                    PlayerBehaviour is also a state machine, making debugging and scalability easier.
+                </p>
+                
+            </div>
+        </div>
+
+        
+        
+        
+
+        
+
+    </div>
+
+
+    <custom-footer>
+</body>
+</html>

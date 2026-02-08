@@ -9,7 +9,7 @@
         color: transparent;
     }
 
-    
+
     70%
     {
         color: transparent;
@@ -22,7 +22,7 @@
         color: var(--lightRedText);
     }
 
-    
+
 }
 
 
@@ -81,20 +81,20 @@
 
 .highlightedGameText
 {
-    
+
     width: 25em;
 } */
 
 .introductionSection
 {
-    
+
 
     background-color: var(--backgroundColor);
     margin: 0;
 
     padding-bottom: 3em;
     padding-top: 2em;
-    
+
     /* border-bottom: var(--darkRedHighlight) dotted 7px; */
     border-top: var(--darkRedHighlight) dotted 7px;
 }
@@ -135,6 +135,22 @@
     transform: translate(0 , -5.5em);
 }
 
+.scrolling-background-container{
+    position: sticky;
+    top: 0;
+    z-index: -1;
+}
+
+.scrollingBackground{
+    position: absolute;
+    top: 0;
+    filter: opacity(1);
+    display: flex;
+    flex-wrap: nowrap;
+    height: 100vh;
+    
+}
+
 .informationText
 {
     margin-left: 1em;
@@ -169,6 +185,28 @@
     align-items: center;
 }
 
+
+.otherProjectsList{
+    display: flex;
+    padding-top: 3em;
+    /* flex-direction: row;
+    flex-wrap: wrap; */
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+
+    
+    .gameInfoBox{
+        width: 30em;
+        margin: 0 1em;
+        flex-direction: column;
+        min-height: 35em;
+        justify-content: start;
+    }
+}
+
+
 .gameHeader
 {
     position: absolute;
@@ -182,7 +220,7 @@
 
 .gameInfoBox
 {
-    
+
     transition-duration: .3s;
     text-decoration: none;
     text-decoration-color: rgb(0, 0, 0, 0);
@@ -206,7 +244,7 @@
     position: relative;
 
     filter: drop-shadow(.6em 1em 0 black);
-    
+
     .hoverGIF
     {
         transition: .2s;
@@ -250,7 +288,7 @@
 .gameMedia
 {
     display: flex;
-    
+
     width: 100%;
     /* height: 50%; */
     aspect-ratio: calc(16/9);
@@ -270,7 +308,7 @@
 
     position: relative;
 
-    
+
 }
 
 .gameThumbnail
@@ -335,6 +373,7 @@
     padding-top: 1em;
     padding-bottom: 3em;
     border-top: var(--darkRedHighlight) dotted 7px;
+    z-index: 1;
 }
 
 .aboutMeContainer
@@ -374,7 +413,7 @@
         width: 5em;
         height: 5em;
     }
-    
+
     .profilePicture
     {
         position: absolute;
