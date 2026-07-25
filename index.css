@@ -197,13 +197,16 @@
     flex-wrap: wrap;
 
     
-    .gameInfoBox{
-        width: 30em;
-        margin: 0 1em;
-        flex-direction: column;
-        min-height: 35em;
-        justify-content: start;
+    @media only screen and (min-width: 768px){
+        .gameInfoBox{
+            width: 30em;
+            margin: 0 1em;
+            flex-direction: column;
+            min-height: 35em;
+            justify-content: start;
+        }
     }
+    
 }
 
 
@@ -403,9 +406,27 @@
 @media only screen and (max-width: 768px)
 {
 
+.otherProjectsList{
+    display: flex;
+    padding-top: 3em;
+    /* flex-direction: row;
+    flex-wrap: wrap; */
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+
+    
+}
+
+    .gameHeader{
+        position: relative;
+    }
+
     .gameInfoBox
     {
         flex-wrap: wrap;
+        padding-top: 0;
     }
 
     .pictureContainer

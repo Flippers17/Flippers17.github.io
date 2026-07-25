@@ -38,10 +38,11 @@ body
 .navbar
 {
     display: flex;
+    margin: 0;
     justify-content: space-between;
     width: 95%;
     align-items: center;
-    padding: 1rem 1.5rem;
+    padding: 1rem 0;
     /* padding-bottom: 18em; */
 }
 
